@@ -32,7 +32,7 @@ English:
 [Translation(Language = Localization.Language.Unspecified)]
 	public class TranslationEn : TranslationMod
 	{
-				public override LocalizeText MAX_DUPES_TO_PRINT => new LocalizeText("Print only care packages, when have alive Duplicants count", "No Duplicants will be proposed to be printed, if you already have at least this amount. Instead all options will be proposed as care packages");
+		public override LocalizeText MAX_DUPES_TO_PRINT => new LocalizeText("Print only care packages, when have alive Duplicants count", "No Duplicants will be proposed to be printed, if you already have at least this amount. Instead all options will be proposed as care packages");
 		public override LocalizeText TITLE => new LocalizeText("Duplicant configuration", "");
 		public override LocalizeText ATTRIBUTES => new LocalizeText("\n<b>ATTRIBUTES</b>", "Select attributes of your choice");
 		public override LocalizeText CHANGE_BUTTON => new LocalizeText("CHANGE", "Skip to next");
