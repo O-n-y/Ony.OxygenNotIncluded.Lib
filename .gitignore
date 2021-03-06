@@ -3,3 +3,6 @@
 ################################################################################
 
 /obj/Debug
+/.vs/Ony.OxygenNotIncluded.Lib/v16
+/Ony.OxygenNotIncluded.Lib/obj/Debug
+/Ony.OxygenNotIncluded.Lib/Ony.OxygenNotIncluded.Lib.csproj.user
