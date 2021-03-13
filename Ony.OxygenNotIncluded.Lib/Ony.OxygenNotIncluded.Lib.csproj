@@ -63,6 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\StartUp.cs" />
+    <Compile Include="Core\IModInfo.cs" />
+    <Compile Include="Core\ModInfo.cs" />
+    <Compile Include="Core\ModInfoWrapper.cs" />
     <Compile Include="Extensions\Assembly_Extensions.cs" />
     <Compile Include="Localization\LanguageSelection.cs" />
     <Compile Include="Localization\LocalizeText.cs" />

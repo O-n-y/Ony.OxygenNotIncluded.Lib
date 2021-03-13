@@ -8,12 +8,11 @@ namespace Ony.OxygenNotIncluded.Lib
 	public class Logger
 	{
 		private static string _prefix;
-		private static bool   _isConsoleEnabled;
+		private static bool _isConsoleEnabled => ModInfoWrapper.ConsoleEnabled;
 
 		public static void Init(string prefix)
 		{
 			_prefix           = prefix;
-			_isConsoleEnabled = true;
 		}
 
 		private static string Prefix => $"[{_prefix}][{Thread.CurrentThread.ManagedThreadId}]";
