@@ -68,7 +68,7 @@ Each class should have **TranslationAttribute** set to language it provide.
 Unspecified - for english (default language).
 
 ## Usage:
-```
+```csharp
 public static L Localization => LanguageSelection<L>.Get();
 
 ....
