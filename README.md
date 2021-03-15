@@ -14,14 +14,14 @@ Will help to create mods more easily.
 To auto-load your mod into the game, add Engine class as following:
 
 ```csharp
-	public class Engine : StartUp<Engine, TranslationMod> { }
-	public static class Loader
+public class Engine : StartUp<Engine, TranslationMod> { }
+public static class Loader
+{
+	public static void OnLoad()
 	{
-		public static void OnLoad()
-		{
-			Engine.Start();
-		}
+		Engine.Start();
 	}
+}
 ```
 Where *TranslationMod* is your localization module (checkout below about it in more details).
 
