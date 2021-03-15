@@ -33,7 +33,7 @@ namespace Ony.OxygenNotIncluded.Lib
 
 			ModInfoWrapper.Initialize(this);
 			
-			Logger.Start($"Version: {Version} initialized");
+			Logger.PrintStart($"Version: {Version} initialized");
 		}
 	}
 }

@@ -18,26 +18,26 @@ namespace Ony.OxygenNotIncluded.Lib
 		private static string Prefix => $"[{_prefix}][{Thread.CurrentThread.ManagedThreadId}]";
 		public static void Print(string message)
 		{
-			if(_isConsoleEnabled) return;
+			if(!_isConsoleEnabled) return;
 
 			Console.WriteLine($"\x1b[48;5;23m  {Prefix}: {message} \x1b[48;5;0m");
 			
 		}
 		public static void Print(Component component)
 		{
-			if(_isConsoleEnabled) return;
+			if(!_isConsoleEnabled) return;
 
 			Console.WriteLine($"\x1b[48;5;23m  {Prefix}: {component.name}: {component.GetType()}  \x1b[48;5;0m");
 		}
 
-		public static void Header(string message)
+		public static void PrintHeader(string message)
 		{
-			if(_isConsoleEnabled) return;
+			if(!_isConsoleEnabled) return;
 			Console.WriteLine($"\x1b[48;5;24m  {Prefix}: {message} \x1b[48;5;0m");
 			
 		}
 
-		public static void Start(string message)
+		public static void PrintStart(string message)
 		{
 			if (Console.Out.GetType().ToString() == "UnityEngine.UnityLogWriter")
 			{
@@ -51,7 +51,7 @@ namespace Ony.OxygenNotIncluded.Lib
 
 		public static void Print(Exception message)
 		{
-			if(_isConsoleEnabled) return;
+			if(!_isConsoleEnabled) return;
 
 			Console.WriteLine($"\x1b[48;5;1m  {Prefix}: {message} \x1b[48;5;0m");
 		}
@@ -59,14 +59,14 @@ namespace Ony.OxygenNotIncluded.Lib
 
 		public static void PrintError(string msg, string stackTrace)
 		{
-			if(_isConsoleEnabled) return;
+			if(!_isConsoleEnabled) return;
 
 			Console.WriteLine($"\x1b[48;5;1m  {Prefix}: {msg}\n{stackTrace} \x1b[48;5;0m");
 		}
 
 		public static void PrintError(string msg)
 		{
-			if(_isConsoleEnabled) return;
+			if(!_isConsoleEnabled) return;
 
 			var stackFrames = Environment.StackTrace.Split('\n').Skip(1).ToArray();
 			var stackTrace  = string.Join("\n", stackFrames);
@@ -76,7 +76,7 @@ namespace Ony.OxygenNotIncluded.Lib
 
 		public static void PrintAction(string msg)
 		{
-			if(_isConsoleEnabled) return;
+			if(!_isConsoleEnabled) return;
 			
 			Console.WriteLine($"\x1b[48;5;3m  {Prefix}: {msg} \x1b[48;5;0m");
 		}

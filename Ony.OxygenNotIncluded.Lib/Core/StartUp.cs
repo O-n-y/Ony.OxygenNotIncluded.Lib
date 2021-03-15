@@ -18,6 +18,12 @@ namespace Ony.OxygenNotIncluded.Lib
 		public static string GetModsFolder() => Path.Combine(Util.RootFolder(), "mods");
 		public static AssemblyName AssemblyName => Assembly.GetExecutingAssembly().GetName();
 		public static L Localization => LanguageSelection<L>.Get();
+
+		public static void Print(string message) => Logger.Print(message);
+		public static void PrintHeader(string message) => Logger.PrintHeader(message);
+		public static void PrintStart(string message) => Logger.PrintStart(message);
+		public static void PrintError(string message) => Logger.PrintError(message);
+		
 		
 		public static void Start()
 		{
