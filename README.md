@@ -10,6 +10,21 @@ Will help to create mods more easily.
 2. Settings module
 3. Utility functions
 
+# Engine Startup
+To auto-load your mod into the game, add Engine class as following:
+
+```csharp
+	public class Engine : StartUp<Engine, TranslationMod> { }
+	public static class Loader
+	{
+		public static void OnLoad()
+		{
+			Engine.Start();
+		}
+	}
+```
+Where *TranslationMod* is your localization module (checkout below about it in more details).
+
 
 # Localization usage example:
 
@@ -53,7 +68,7 @@ Each class should have **TranslationAttribute** set to language it provide.
 Unspecified - for english (default language).
 
 ## Usage:
-```
+```csharp
 public static L Localization => LanguageSelection<L>.Get();
 
 ....
